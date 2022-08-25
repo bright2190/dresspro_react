@@ -5,7 +5,7 @@ import SpaceAtTheSide from "./Component/SpaceAtTheSide/SpaceAtTheSide";
 // import Navbar from "./Component/Navbar/Navbar";
 function App() {
 
-  
+
 
 
 
@@ -14,6 +14,7 @@ function App() {
   return (
     <>
       <SpaceAtTheSide/>
+      
     </>
   );
 }

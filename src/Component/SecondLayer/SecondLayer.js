@@ -1,94 +1,113 @@
 import "./SecondLayer.css"
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper";
+
 export default function SecondLayer(){
-  return(
-    <div class="second_layer" id="">
-        <div class="swiper swiper1">
-          {/* <!-- Additional required wrapper --> */}
-          <div class="swiper-wrapper">
-            {/* <!-- Slides --> */}
-            <div class="swiper-slide" id="slide1">
-              <div class="text-container">
-                <div class="explore">EXPLORE</div>
-                <div class="your">YOUR</div>
-                <div class="true">TRUE</div>
-                <div class="style">STYLE</div>
-              </div>
-            </div>
-            <div class="swiper-slide" id="slide2">
-              <div class="text-container">
-                <div class="explore">EXPLORE</div>
-                <div class="your">YOUR</div>
-                <div class="true">TRUE</div>
-                <div class="style">STYLE</div>
-              </div>
-            </div>
-            <div class="swiper-slide" id="slide3">
-              <div class="text-container">
-                <div class="explore">EXPLORE</div>
-                <div class="your">YOUR</div>
-                <div class="true">TRUE</div>
-                <div class="style">STYLE</div>
-              </div>
-            </div>
-            <div class="swiper-slide" id="slide4">
-              <div class="text-container">
-                <div class="explore">EXPLORE</div>
-                <div class="your">YOUR</div>
-                <div class="true">TRUE</div>
-                <div class="style">STYLE</div>
-              </div>
-            </div>
-            <div class="swiper-slide" id="slide5">
-              <div class="text-container">
-                <div class="explore">EXPLORE</div>
-                <div class="your">YOUR</div>
-                <div class="true">TRUE</div>
-                <div class="style">STYLE</div>
-              </div>
-            </div>
-            <div class="swiper-slide" id="slide6">
-              <div class="text-container">
-                <div class="explore">EXPLORE</div>
-                <div class="your">YOUR</div>
-                <div class="true">TRUE</div>
-                <div class="style">STYLE</div>
-              </div>
-            </div>
-            <div class="swiper-slide" id="slide7">
-              <div class="text-container">
-                <div class="explore">EXPLORE</div>
-                <div class="your">YOUR</div>
-                <div class="true">TRUE</div>
-                <div class="style">STYLE</div>
-              </div>
-            </div>
-            <div class="swiper-slide" id="slide8">
-              <div class="text-container">
-                <div class="explore">EXPLORE</div>
-                <div class="your">YOUR</div>
-                <div class="true">TRUE</div>
-                <div class="style">STYLE</div>
-              </div>
-            </div>
-            <div class="swiper-slide" id="slide9">
-              <div class="text-container">
-                <div class="explore">EXPLORE</div>
-                <div class="your">YOUR</div>
-                <div class="true">TRUE</div>
-                <div class="style">STYLE</div>
-              </div>
-            </div>
+  return (
+    <Swiper
+      className="swiper1"
+      modules={[Autoplay, Pagination, Navigation]}
+      // spaceBetween={50}
+      slidesPerView={1}
+     
+      onSlideChange={() => console.log("slide change")}
+      onSwiper={(swiper) => console.log(swiper)}
+      autoplay={{
+        delay: 4000,
+        disableOnInteraction: false,
+      }}
+    >
+      <SwiperSlide id="slide0">
+        <div className="swiper-slide">
+          <div className="text-container-div">
+            <div className="explore">EXPLORE</div>
+            <div className="your">YOUR</div>
+            <div className="true">TRUE</div>
+            <div className="style">STYLE</div>
           </div>
-          {/* <!-- If we need pagination --> */}
-          {/* <!-- <div class="swiper-pagination swiper-pagination1"></div> --> */}
-
-          {/* <!-- If we need navigation buttons --> */}
-          {/* <!-- <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div> --> */}
-
-          {/* <!-- If we need scrollbar --> */}
-          {/* <!-- <div class="swiper-scrollbar"></div> --> */}
         </div>
-      </div>
-  )
+      </SwiperSlide>
+      <SwiperSlide id="slide1">
+        <div className="swiper-slide">
+          <div className="text-container-div">
+            <div className="explore">EXPLORE</div>
+            <div className="your">YOUR</div>
+            <div className="true">TRUE</div>
+            <div className="style">STYLE</div>
+          </div>
+        </div>
+      </SwiperSlide>
+
+      <SwiperSlide id="slide2">
+        <div className="swiper-slide">
+          <div className="text-container-div">
+            <div className="explore">EXPLORE</div>
+            <div className="your">YOUR</div>
+            <div className="true">TRUE</div>
+            <div className="style">STYLE</div>
+          </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide id="slide3">
+        <div className="swiper-slide">
+          <div className="text-container-div">
+            <div className="explore">EXPLORE</div>
+            <div className="your">YOUR</div>
+            <div className="true">TRUE</div>
+            <div className="style">STYLE</div>
+          </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide id="slide4">
+        <div className="swiper-slide">
+          <div className="text-container-div">
+            <div className="explore">EXPLORE</div>
+            <div className="your">YOUR</div>
+            <div className="true">TRUE</div>
+            <div className="style">STYLE</div>
+          </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide id="slide5">
+        <div className="swiper-slide">
+          <div className="text-container-div">
+            <div className="explore">EXPLORE</div>
+            <div className="your">YOUR</div>
+            <div className="true">TRUE</div>
+            <div className="style">STYLE</div>
+          </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide id="slide6">
+        <div className="swiper-slide">
+          <div className="text-container-div">
+            <div className="explore">EXPLORE</div>
+            <div className="your">YOUR</div>
+            <div className="true">TRUE</div>
+            <div className="style">STYLE</div>
+          </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide id="slide7">
+        <div className="swiper-slide">
+          <div className="text-container-div">
+            <div className="explore">EXPLORE</div>
+            <div className="your">YOUR</div>
+            <div className="true">TRUE</div>
+            <div className="style">STYLE</div>
+          </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide id="slide8">
+        <div className="swiper-slide">
+          <div className="text-container-div">
+            <div className="explore">EXPLORE</div>
+            <div className="your">YOUR</div>
+            <div className="true">TRUE</div>
+            <div className="style">STYLE</div>
+          </div>
+        </div>
+      </SwiperSlide>
+    </Swiper>
+  );
 }
