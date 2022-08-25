@@ -1,0 +1,55 @@
+import { Link } from "react-router-dom";
+import "./Specific.css";
+
+
+
+
+
+
+export default function Specific() {
+
+  let cloth_categories = ["SMOCKED TOPS", "RUCHED DRESSES", "WRAP TOPS"];
+
+  let cloth_categories_divs = cloth_categories.map((cloth_name, index)=>{
+
+    let cloth_name_id = cloth_name.replace(/\s+/g, "").toLowerCase();
+    // cloth_name_id = cloth_name_id.toLowerCase();
+    // console.log(cloth_name_id);
+    return (
+      <div className="specifics_top_section" key={cloth_name}>
+        <div className="specifics_header">{cloth_name}</div>
+        <div className="specifics_content">
+          <div className="specifics_container specifics_first_div_container">
+            <div className="specifics first_div" id={cloth_name_id + "1"}></div>
+          </div>
+
+          <div className="specifics_container specifics_second_div_container">
+            <div className="specifics second_div" id={cloth_name_id + "2"}></div>
+          </div>
+
+          <div className="specifics_container specifics_third_div_container">
+            <div className="specifics third_div" id={cloth_name_id + "3"}></div>
+          </div>
+          <div className="specifics_container specifics_fourth_div_container">
+            <div className="specifics fourth_div" id={cloth_name_id + "4"}></div>
+          </div>
+        </div>
+        <div className="specifics_more">
+          <div className="sub_specifics_more">
+            <Link to="">SEE MORE</Link>
+          </div>
+        </div>
+      </div>
+    );
+  })
+
+
+
+
+  return (
+    <>
+      {cloth_categories_divs}
+      
+    </>
+  );
+}

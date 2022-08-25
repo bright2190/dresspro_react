@@ -1,11 +1,13 @@
 import "./SpaceAtTheSide.css";
 import { Route, Routes } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import Specific from "../Specific/Specific";
 
 import Navbar from "../Navbar/Navbar";
 import SecondLayer from "../SecondLayer/SecondLayer";
 import Product from "../Product/Product";
+import Feature from "../Feature/Feature";
+import Footer from "../Footer/Footer";
 
 export default function SpaceAtTheSide() {
 
@@ -59,6 +61,9 @@ export default function SpaceAtTheSide() {
           second_layer_hover={second_layer_hover}
           second_layer_hover_remove={second_layer_hover_remove}
         />
+        <Specific/>
+        <Feature/>
+        <Footer/>
       </div>
     </>
   );
