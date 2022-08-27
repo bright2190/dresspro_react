@@ -22,13 +22,13 @@ export default function Navbar (props){
             {/* <Link to="#product_section">Products</Link> */}
           </li>
           <li className="links">
-            <Link to="customer_review.html">Customers Review</Link>
+            <Link to="/customer">Customers Review</Link>
           </li>
           <li className="links">
-            <Link to="about_us.html">About Us</Link>
+            <Link to="/about">About Us</Link>
           </li>
           <li className="links">
-            <Link to="company_policy.html">Company Policy</Link>
+            <Link to="/policy">Company Policy</Link>
           </li>
         </ul>
       </div>
