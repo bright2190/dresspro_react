@@ -11,6 +11,7 @@ import Footer from "../Footer/Footer";
 import CustomerReview from "../CustomerReview/CustomerReview";
 import Home from "../Home/Home";
 import AboutUs from "../AboutUs/AboutUs";
+import  {Policy}  from "../Policy/Policy";
 
 export default function SpaceAtTheSide() {
 
@@ -33,6 +34,7 @@ export default function SpaceAtTheSide() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/customer" element={<CustomerReview />}></Route>
           <Route path="/about" element={<AboutUs />}></Route>
+          <Route path="/policy" element={<Policy />}></Route>
         </Routes>
         <Footer />
       </div>
