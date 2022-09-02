@@ -8,7 +8,7 @@ import "./Specific.css";
 
 export default function Specific() {
 
-  let cloth_categories = ["SMOCKED TOPS", "RUCHED DRESSES", "WRAP TOPS"];
+  let cloth_categories = ["SMOCKED TOPS", "RUCHED DRESSES", "WRAP TOPS", "MINI SKIRTS", "SATIN DRESSES", "TWO PIECES"];
 
   let cloth_categories_divs = cloth_categories.map((cloth_name, index)=>{
 
