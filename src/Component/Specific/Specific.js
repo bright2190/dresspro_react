@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Specific.css";
+import "./BackgroundImage.scss"
 
 export default function Specific(props) {
   // let cloth_categories = [

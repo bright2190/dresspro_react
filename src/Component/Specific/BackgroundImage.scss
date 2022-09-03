@@ -1,0 +1,16 @@
+@for $i from 1 through 4 {
+    #baniex#{$i} {
+        // background: url('../dress_pro_images/RENAME-#{$i}.jpg');
+        background: url("../../assets/images/RENAME-#{$i}.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+}
+
+
+#smockedtops1, #rucheddresses1, #wraptops1, #miniskirts1, #satindresses1, #twopieces1 {
+  background: url("../../assets/images/RENAME-11.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
