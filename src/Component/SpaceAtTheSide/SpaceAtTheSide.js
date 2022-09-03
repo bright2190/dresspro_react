@@ -27,7 +27,7 @@ export default function SpaceAtTheSide() {
     "MINI SKIRTS",
     "SATIN DRESSES",
     "TWO PIECES",
-    "BANIEX"
+    
   ];
 
   let cloth_route =  cloth_categories.map((cloth_name, index) =>{
