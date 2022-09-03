@@ -1,15 +1,19 @@
 import { Link } from "react-router-dom";
 import "./Specific.css";
 
-export default function Specific() {
-  let cloth_categories = [
-    "SMOCKED TOPS",
-    "RUCHED DRESSES",
-    "WRAP TOPS",
-    "MINI SKIRTS",
-    "SATIN DRESSES",
-    "TWO PIECES",
-  ];
+export default function Specific(props) {
+  // let cloth_categories = [
+  //   "SMOCKED TOPS",
+  //   "RUCHED DRESSES",
+  //   "WRAP TOPS",
+  //   "MINI SKIRTS",
+  //   "SATIN DRESSES",
+  //   "TWO PIECES",
+  // ];
+
+  let cloth_categories = props.cloth_categories
+
+
 
   let cloth_categories_divs = cloth_categories.map((cloth_name, index) => {
     let cloth_name_id = cloth_name.replace(/\s+/g, "").toLowerCase();
@@ -43,7 +47,7 @@ export default function Specific() {
         <div className="specifics_more">
           <div className="sub_specifics_more">
             {/* <Link to={"/" + cloth_name_id}>SEE MORE</Link> */}
-            <a href="/policy"> See more</a>
+            <a href={"/" + cloth_name_id}>SEE MORE</a>
           </div>
         </div>
       </div>

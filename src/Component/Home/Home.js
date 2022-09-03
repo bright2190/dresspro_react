@@ -4,7 +4,9 @@ import Specific from '../Specific/Specific';
 import Feature from '../Feature/Feature';
 import Product from '../Product/Product';
 
-export default function Home() {
+export default function Home(props) {
+
+  let cloth_categories = props.cloth_categories
 
   function second_layer_hover(event) {
     event.currentTarget.querySelector(".on_hover_display").style.display =
@@ -25,7 +27,7 @@ export default function Home() {
         second_layer_hover={second_layer_hover}
         second_layer_hover_remove={second_layer_hover_remove}
       />
-      <Specific />
+      <Specific cloth_categories={cloth_categories}/>
       <Feature />
     </>
   );

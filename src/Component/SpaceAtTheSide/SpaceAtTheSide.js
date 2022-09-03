@@ -11,6 +11,7 @@ import Footer from "../Footer/Footer";
 import CustomerReview from "../CustomerReview/CustomerReview";
 import Home from "../Home/Home";
 import AboutUs from "../AboutUs/AboutUs";
+import Section from "../Section/Section";
 import  {Policy}  from "../Policy/Policy";
 
 export default function SpaceAtTheSide() {
@@ -26,6 +27,7 @@ export default function SpaceAtTheSide() {
     "MINI SKIRTS",
     "SATIN DRESSES",
     "TWO PIECES",
+    "BANIEX"
   ];
 
   let cloth_route =  cloth_categories.map((cloth_name, index) =>{
@@ -38,7 +40,7 @@ export default function SpaceAtTheSide() {
 
 
     return (
-          <Route path={"/" + cloth_name_id} element={<Policy />}></Route>
+          <Route path={"/" + cloth_name_id} element={<Section cloth_name={cloth_name}/>}></Route>
 
     )
   })
@@ -58,7 +60,7 @@ export default function SpaceAtTheSide() {
         <Routes>
           {cloth_route}
 
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/" element={<Home cloth_categories={cloth_categories}  />}></Route>
           <Route path="/customer" element={<CustomerReview />}></Route>
           <Route path="/about" element={<AboutUs />}></Route>
           <Route path="/policy" element={<Policy />}></Route>
