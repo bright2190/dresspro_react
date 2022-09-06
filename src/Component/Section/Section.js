@@ -1,21 +1,17 @@
 import React from 'react'
+import "./SectionBackgroundImage.scss";
 import "./Section.css"
-import "./SectionBackgroundImage.scss"
 import { Policy } from '../Policy/Policy'
 
 const Section = (props) => {
 
   const mouse_hover = (event)=>{
-    event.currentTarget.querySelector(".mini_skirts_image_hover").style.display = "block"
-    // alert("hi")
-
+    event.currentTarget.querySelector(".section_image_hover").style.display = "block"
     console.log("hello")
   }
 
   const mouse_leave = (event) => {
-    event.currentTarget.querySelector(".mini_skirts_image_hover").style.display = "none"
-    // alert("hi")
-
+    event.currentTarget.querySelector(".section_image_hover").style.display = "none"
     console.log("hello");
   };
 
@@ -33,9 +29,9 @@ const Section = (props) => {
   let number_of_clothes = props.number_of_clothes;
   let cloth_name_lowercase = cloth_name.toLowerCase();
   let number_of_clothes_div = [
-    <div class="mini_skirts_image_container" onMouseEnter={mouse_hover} onMouseLeave={mouse_leave}>
-      <div class="mini_skirts_image">
-        <div class="mini_skirts_image_hover">
+    <div class="section_image_container" onMouseEnter={mouse_hover} onMouseLeave={mouse_leave}>
+      <div class="section_image">
+        <div class="section_image_hover">
           <div class="image_identity">MS10001</div>
           <div class="buy_now">BUY NOW</div>
         </div>
@@ -44,9 +40,13 @@ const Section = (props) => {
   ];
   for (let i = 0; i < number_of_clothes; i++){
     number_of_clothes_div.push(
-      <div class="mini_skirts_image_container">
-        <div class="mini_skirts_image">
-          <div class="mini_skirts_image_hover">
+      <div
+        class="section_image_container"
+        onMouseEnter={mouse_hover}
+        onMouseLeave={mouse_leave}
+      >
+        <div class={"section_image section_image" + i}>
+          <div class="section_image_hover">
             <div class="image_identity">MS10001</div>
             <div class="buy_now">BUY NOW</div>
           </div>
@@ -57,32 +57,31 @@ const Section = (props) => {
   }
   return (
     <div>
-      
-      <div class="mini_skirts_info">
-        <div class="mini_skirts_nav_display">Products {cloth_name} </div>
-        <div class="mini_skirts_text_display">MINI SKIRTS</div>
+      <div class="section_info">
+        <div class="section_nav_display">Products &gt; {cloth_name} </div>
+        <div class="section_text_display">{cloth_name}</div>
       </div>
 
-      <div class="mini_skirts_image_section">
-        <div class="mini_skirts_image_container">
-          <div class="mini_skirts_image">
-            <div class="mini_skirts_image_hover">
+      <div class="section_image_section">
+        <div class="section_image_container">
+          <div class="section_image section_image2">
+            <div class="section_image_hover">
               <div class="image_identity">MS10001</div>
               <div class="buy_now">BUY NOW</div>
             </div>
           </div>
         </div>
-        <div class="mini_skirts_image_container">
-          <div class="mini_skirts_image">
-            <div class="mini_skirts_image_hover">
+        <div class="section_image_container">
+          <div class="section_image section_image2">
+            <div class="section_image_hover">
               <div class="image_identity">MS10001</div>
               <div class="buy_now">BUY NOW</div>
             </div>
           </div>
         </div>
-        <div class="mini_skirts_image_container">
-          <div class="mini_skirts_image">
-            <div class="mini_skirts_image_hover">
+        <div class="section_image_container">
+          <div class="section_image section_image3">
+            <div class="section_image_hover">
               <div class="image_identity">MS10001</div>
               <div class="buy_now">BUY NOW</div>
             </div>
@@ -90,10 +89,8 @@ const Section = (props) => {
         </div>
         {number_of_clothes_div}
       </div>
-
     </div>
-
-  )
+  );
 }
 
 export default Section

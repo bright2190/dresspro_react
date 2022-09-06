@@ -1,8 +1,9 @@
 @for $i from 0 through 36 {
-    #mini_skirts_image#{$i} {
+    .section_image#{$i} {
         background: url('../../assets/images/RENAME-#{$i}.jpg');
         background-size: cover;
         background-repeat: no-repeat;
 
     }
 }
+

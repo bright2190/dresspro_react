@@ -1,28 +1,28 @@
-.mini_skirts_image_section {
+.section_image_section {
   display: flex;
   flex-wrap: wrap;
 }
 
-.mini_skirts_image_container {
+.section_image_container {
   width: 33.33%;
   height: 400px;
   text-align: center;
 }
 
-.mini_skirts_image {
+.section_image {
   /* margin: 0px auto; */
   width: 95%;
   height: 380px;
-  background: url('../../assets/images/RENAME-2.jpg');
+  /* background: url('../../assets/images/RENAME-2.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.mini_skirts_info {
+.section_info {
   /* border: 2px solid red; */
 }
 
-.mini_skirts_nav_display {
+.section_nav_display {
   /* border: 2px solid red; */
   /* margin: 0px auto; */
   text-align: center;
@@ -30,7 +30,7 @@
   background: rgb(218, 171, 187);
 }
 
-.mini_skirts_text_display {
+.section_text_display {
   font-size: 3rem;
   font-family: "Cinzel", serif;
   margin-top: 4.5rem;
@@ -56,23 +56,23 @@
   visibility: hidden;
 }
 
-.mini_skirts_image_hover {
+.section_image_hover {
   display: none;
 }
 
 @media screen and (max-width: 990px) {
-  .mini_skirts_image_container {
+  .section_image_container {
     width: 50%;
   }
 }
 @media screen and (max-width: 600px) {
-  .mini_skirts_image_container {
+  .section_image_container {
     width: 100%;
   }
-  .mini_skirts_image {
+  .section_image {
     width: 100%;
   }
-  .mini_skirts_text_display {
+  .section_text_display {
     font-size: 2rem;
   }
 }
