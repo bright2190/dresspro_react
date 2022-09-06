@@ -25,18 +25,13 @@ const Section = (props) => {
 
 
 
+
   let cloth_name = props.cloth_name;
+  let cloth_name_unspaced = cloth_name.replace(/\s+/g, "").toLowerCase();
   let number_of_clothes = props.number_of_clothes;
   let cloth_name_lowercase = cloth_name.toLowerCase();
   let number_of_clothes_div = [
-    <div class="section_image_container" onMouseEnter={mouse_hover} onMouseLeave={mouse_leave}>
-      <div class="section_image">
-        <div class="section_image_hover">
-          <div class="image_identity">MS10001</div>
-          <div class="buy_now">BUY NOW</div>
-        </div>
-      </div>
-    </div>
+  
   ];
   for (let i = 0; i < number_of_clothes; i++){
     number_of_clothes_div.push(
@@ -45,9 +40,9 @@ const Section = (props) => {
         onMouseEnter={mouse_hover}
         onMouseLeave={mouse_leave}
       >
-        <div class={"section_image section_image" + i}>
+        <div class={"section_image "+ cloth_name_unspaced +"_image" + i}>
           <div class="section_image_hover">
-            <div class="image_identity">MS10001</div>
+            <div class="image_identity">{cloth_name_unspaced + i}</div>
             <div class="buy_now">BUY NOW</div>
           </div>
         </div>
@@ -63,30 +58,18 @@ const Section = (props) => {
       </div>
 
       <div class="section_image_section">
-        <div class="section_image_container">
+
+
+        {/* <div class="section_image_container">
           <div class="section_image section_image2">
             <div class="section_image_hover">
               <div class="image_identity">MS10001</div>
               <div class="buy_now">BUY NOW</div>
             </div>
           </div>
-        </div>
-        <div class="section_image_container">
-          <div class="section_image section_image2">
-            <div class="section_image_hover">
-              <div class="image_identity">MS10001</div>
-              <div class="buy_now">BUY NOW</div>
-            </div>
-          </div>
-        </div>
-        <div class="section_image_container">
-          <div class="section_image section_image3">
-            <div class="section_image_hover">
-              <div class="image_identity">MS10001</div>
-              <div class="buy_now">BUY NOW</div>
-            </div>
-          </div>
-        </div>
+        </div> */}
+       
+        
         {number_of_clothes_div}
       </div>
     </div>
