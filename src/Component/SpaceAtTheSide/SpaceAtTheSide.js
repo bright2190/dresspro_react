@@ -30,7 +30,7 @@ export default function SpaceAtTheSide() {
     
   ];
 
-  let cloth_categories_number = [25, 26, 36, 30, 32, 30]
+  let cloth_categories_number = [25, 26, 36, 30, 32, 11]
 
   let cloth_route =  cloth_categories.map((cloth_name, index) =>{
     let cloth_name_id = cloth_name.replace(/\s+/g, "").toLowerCase();
