@@ -76,7 +76,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  NEXEARTH INT'L.
+                  Dress Pro
                 </a>
               </strong>
             </div>
