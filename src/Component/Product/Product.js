@@ -16,6 +16,30 @@ export default function Product(props) {
 
       let second_layer_hover = props.second_layer_hover;
       let second_layer_hover_remove = props.second_layer_hover_remove;
+      let cloth_categories = props.cloth_categories;
+      let cloth_divs =  cloth_categories.map((cloth, index)=>{
+
+
+      let cloth_name_id = cloth.replace(/\s+/g, "").toLowerCase();
+
+        return (
+          <>
+            <SwiperSlide
+              id={"swiper2-slide" + index}
+              onMouseOver={second_layer_hover}
+              onMouseLeave={second_layer_hover_remove}
+            >
+              <div class="on_hover_display">
+                <div class="middle_hover">
+                  {/* <Link to="">Order Now</Link> */}
+                  <a href={"/" + cloth_name_id}>Order Now</a>
+                </div>
+                <div class="down_hover">{cloth}</div>
+              </div>
+            </SwiperSlide>
+          </>
+        );
+      })
 
   return (
     <>
@@ -45,7 +69,7 @@ export default function Product(props) {
         }}
         className="second-swiper"
       >
-        <SwiperSlide
+        {/* <SwiperSlide
           id="swiper2-slide0"
           onMouseOver={second_layer_hover}
           onMouseLeave={second_layer_hover_remove}
@@ -56,103 +80,10 @@ export default function Product(props) {
             </div>
             <div class="down_hover">Smocked Top</div>
           </div>
-        </SwiperSlide>
-        <SwiperSlide
-          id="swiper2-slide1"
-          onMouseOver={second_layer_hover}
-          onMouseLeave={second_layer_hover_remove}
-        >
-          <div class="on_hover_display">
-            <div class="middle_hover">
-             <Link to="">Order Now</Link>
-            </div>
-            <div class="down_hover">Smocked Top</div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide
-          id="swiper2-slide2"
-          onMouseOver={second_layer_hover}
-          onMouseLeave={second_layer_hover_remove}
-        >
-          <div class="on_hover_display">
-            <div class="middle_hover">
-             <Link to="">Order Now</Link>
-            </div>
-            <div class="down_hover">Smocked Top</div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide
-          id="swiper2-slide3"
-          onMouseOver={second_layer_hover}
-          onMouseLeave={second_layer_hover_remove}
-        >
-          <div class="on_hover_display">
-            <div class="middle_hover">
-             <Link to="">Order Now</Link>
-            </div>
-            <div class="down_hover">Smocked Top</div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide
-          id="swiper2-slide4"
-          onMouseOver={second_layer_hover}
-          onMouseLeave={second_layer_hover_remove}
-        >
-          <div class="on_hover_display">
-            <div class="middle_hover">
-             <Link to="">Order Now</Link>
-            </div>
-            <div class="down_hover">Smocked Top</div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide
-          id="swiper2-slide5"
-          onMouseOver={second_layer_hover}
-          onMouseLeave={second_layer_hover_remove}
-        >
-          <div class="on_hover_display">
-            <div class="middle_hover">
-             <Link to="">Order Now</Link>
-            </div>
-            <div class="down_hover">Smocked Top</div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide
-          id="swiper2-slide6"
-          onMouseOver={second_layer_hover}
-          onMouseLeave={second_layer_hover_remove}
-        >
-          <div class="on_hover_display">
-            <div class="middle_hover">
-             <Link to="">Order Now</Link>
-            </div>
-            <div class="down_hover">Smocked Top</div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide
-          id="swiper2-slide7"
-          onMouseOver={second_layer_hover}
-          onMouseLeave={second_layer_hover_remove}
-        >
-          <div class="on_hover_display">
-            <div class="middle_hover">
-             <Link to="">Order Now</Link>
-            </div>
-            <div class="down_hover">Smocked Top</div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide
-          id="swiper2-slide8"
-          onMouseOver={second_layer_hover}
-          onMouseLeave={second_layer_hover_remove}
-        >
-          <div class="on_hover_display">
-            <div class="middle_hover">
-             <Link to="">Order Now</Link>
-            </div>
-            <div class="down_hover">Smocked Top</div>
-          </div>
-        </SwiperSlide>
+        </SwiperSlide> */}
+        
+        
+        {cloth_divs}
       </Swiper>
     </>
   );

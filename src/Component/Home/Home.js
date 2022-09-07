@@ -26,8 +26,9 @@ export default function Home(props) {
       <Product
         second_layer_hover={second_layer_hover}
         second_layer_hover_remove={second_layer_hover_remove}
+        cloth_categories={cloth_categories}
       />
-      <Specific cloth_categories={cloth_categories}/>
+      <Specific cloth_categories={cloth_categories} />
       <Feature />
     </>
   );

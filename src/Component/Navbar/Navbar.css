@@ -89,6 +89,12 @@ nav a:active {
 
   }
 
+  .cc{
+    display: flex;
+  }
+
+  /* .brand_name{font-size: 1.2rem;} */
+
   .links_div {
     width: 95%;
     position: absolute;
