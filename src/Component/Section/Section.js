@@ -1,6 +1,7 @@
 import React from 'react'
-import "./SectionBackgroundImage.scss";
+// import "./SectionBackgroundImage.scss";
 import "./Section.css"
+import logo from "../../../src/assets/images/about1.jpg"
 import { Policy } from '../Policy/Policy'
 
 const Section = (props) => {
@@ -40,7 +41,8 @@ const Section = (props) => {
         onMouseEnter={mouse_hover}
         onMouseLeave={mouse_leave}
       >
-        <div class={"section_image "+ cloth_name_unspaced +"_image" + i}>
+        <div class={"section_image " + cloth_name_unspaced + "_image" + i}>
+          <img src={logo}></img>
           <div class="section_image_hover">
             <div class="image_identity">{cloth_name_unspaced + i}</div>
             <div class="buy_now">BUY NOW</div>

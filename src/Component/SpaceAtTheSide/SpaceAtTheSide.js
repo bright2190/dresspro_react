@@ -2,8 +2,11 @@ import "./SpaceAtTheSide.css";
 import { Route, Routes } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Specific from "../Specific/Specific";
+// import Cart from "../Cart/Cart";
+
 
 import Navbar from "../Navbar/Navbar";
+
 import SecondLayer from "../SecondLayer/SecondLayer";
 import Product from "../Product/Product";
 import Feature from "../Feature/Feature";
@@ -55,10 +58,14 @@ export default function SpaceAtTheSide() {
         <Navbar navbar_togglerProps={navbar_toggler} />
         <Routes>
           {cloth_route}
-          <Route path="/" element={<Home cloth_categories={cloth_categories}  />}></Route>
+          <Route
+            path="/"
+            element={<Home cloth_categories={cloth_categories} />}
+          ></Route>
           <Route path="/customer" element={<CustomerReview />}></Route>
           <Route path="/about" element={<AboutUs />}></Route>
           <Route path="/policy" element={<Policy />}></Route>
+          <Route path="/cart" element={<Cart />}></Route>
         </Routes>
         <Footer />
       </div>

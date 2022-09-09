@@ -13,21 +13,14 @@ export default function Navbar (props){
         <div className="brand_name">DRESS PRO</div>
         <div className="cc">
           <div className="social mobile">
-            {/* <a
-              href="https://www.instagram.com/dress.pro_"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <i className="fa fa-user"></i>
-              {"\u00A0"}
-            </a> */}
-            <a href="" target="_blank" rel="noreferrer noopener">
+            <Link to="/cart">
               <i class="fa fa-shopping-cart" aria-hidden="true"></i>
               {"\u00A0"}
               {"\u00A0"}
               {"\u00A0"}
               {"\u00A0"}
-            </a>
+              
+            </Link>
           </div>
           <div className="toggle" onClick={navbar_toggler}>
             <i className="fas fa-bars"></i>
@@ -38,7 +31,6 @@ export default function Navbar (props){
         <ul>
           <li className="links">
             <Link to="/">Products</Link>
-            {/* <Link to="#product_section">Products</Link> */}
           </li>
           <li className="links">
             <Link to="/customer">Customers Review</Link>
@@ -52,10 +44,10 @@ export default function Navbar (props){
         </ul>
       </div>
       <div className="social">
-        <a href="" target="_blank" rel="noreferrer noopener">
+        <Link to="/cart">
           <i class="fa fa-shopping-cart" aria-hidden="true"></i>
           {"\u00A0"} CART
-        </a>
+        </Link>
         <a
           href="https://www.instagram.com/dress.pro_"
           target="_blank"
